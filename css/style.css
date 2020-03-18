@@ -1,0 +1,1048 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Open Sans", sans-serif;
+  background-color: white;
+  color: #242424;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  color: #00274C;
+}
+a:visited {
+  color: #465E85;
+}
+a:hover {
+  color: #00274C;
+  text-decoration: overline; 
+}
+
+h1{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 24px;
+  color: #1c1c1c;
+  padding-bottom: 20px
+}
+
+nav li{
+  display:inline;
+  padding-right:20px;
+}
+
+#current_page_nav{
+  font-weight: bold;
+}
+
+nav a{
+  color: #242424;
+  text-decoration: none; 
+  font-size: 12px;
+}
+
+nav a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -40px;
+}
+
+
+ .skip a:focus{
+  background: white;
+  border-radius: 5px;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+}
+
+
+:focus{
+  border: 2px solid black;
+}
+
+/* back to top button (learned from W3schools) */
+/* url: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 35px; /* Place the button at the bottom of the page */
+  right: 35px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #808080; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 12px; /* Increase font size */
+}
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*Add animation for header slogan (learned from animista.net/)*/
+/*url: https://animista.net/play/entrances/puff-in*/
+/*Keyframes for animation*/
+@-webkit-keyframes puff-in {
+  0% {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes puff-in {
+  0% {
+    -webkit-transform: scale(4);
+            transform: scale(4);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+.puff-in {
+  -webkit-animation: puff-in 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+          animation: puff-in 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+/*Add animation for About Me page animation text (learned from codepen.io//)*/
+/*url: https://codepen.io/yoannhel/pen/sJpDj*/
+/*Keyframes for animation*/
+ .content {
+   position: relative;
+   top:100px;
+   left: 30px;
+   height: 80px;
+   overflow: hidden;
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 20px;
+   line-height: 20px;
+   color: #00274C;
+}
+ .content__container {
+   font-weight: 600;
+   overflow: hidden;
+   height: 20px;
+   padding: 0 20px;
+}
+ .content__container__text {
+   display: inline;
+   float: left;
+   margin: 0;
+}
+ .content__container__list {
+   margin-top: 0;
+   padding-left: 30%;
+   text-align: left;
+   list-style: none;
+   -webkit-animation-name: change;
+   -webkit-animation-duration: 10s;
+   -webkit-animation-iteration-count: infinite;
+   animation-name: change;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+}
+ .content__container__list__item {
+   line-height: 20px;
+   margin: 0;
+}
+ @-webkit-keyframes change {
+  0%, 12.66%, 100% {
+     transform: translate3d(0, 0, 0);
+  }
+   16.66%, 29.32% {
+     transform: translate3d(0, -25%, 0);
+  }
+   33.32%, 45.98% {
+     transform: translate3d(0, -50%, 0);
+  }
+   49.98%, 62.64% {
+     transform: translate3d(0, -75%, 0);
+  }
+   66.64%, 79.3% {
+     transform: translate3d(0, -50%, 0);
+  }
+   83.3%, 95.96% {
+     transform: translate3d(0, -25%, 0);
+  }
+}
+ @keyframes change {
+   0%, 12.66%, 100% {
+     transform: translate3d(0, 0, 0);
+  }
+   16.66%, 29.32% {
+     transform: translate3d(0, -25%, 0);
+  }
+   33.32%, 45.98% {
+     transform: translate3d(0, -50%, 0);
+  }
+   49.98%, 62.64% {
+     transform: translate3d(0, -75%, 0);
+  }
+   66.64%, 79.3% {
+     transform: translate3d(0, -50%, 0);
+  }
+   83.3%, 95.96% {
+     transform: translate3d(0, -25%, 0);
+  }
+}
+
+/*Create contact fomr (learn from W3school)*/
+/*url: https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* When moving the mouse over the submit button, add color */
+input[type=submit]:hover {
+  background-color: #00274C;
+}
+/* Style the reset button with a specific background color etc */
+input[type=reset] {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* When moving the mouse over the reset button, add a darker blue color */
+input[type=reset]:hover {
+  background-color: #00274C;
+}
+
+.parallax_box{
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 300px;                /* Parallax effect */
+  background-image: url("../images/index_bg.jpeg");
+  /*background-color: black;*/
+}
+.parallax_box p{
+  color: #242424;
+  font-size: 18px;
+  padding: 0 100px;
+  text-align: center;
+  line-height: 130%;
+  color: white;
+}
+
+/*    flip card (learned from W3school)
+    url: https://www.w3schools.com/howto/howto_css_flip_card.asp*/
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  border-radius: 500px;
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+footer{
+  background-color: white;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #242424;
+  grid-column: 1 / -1;
+  grid-row: 7 / auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+nav{
+  background-color: white;
+  padding: 20px 0; 
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+}
+
+header{
+  color: #1c1c1c;
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+}
+
+header p{
+  color: #242424;
+  font-size: 18px;
+  padding: 0 100px;
+  text-align: center;
+  line-height: 130%;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: auto 400px auto;
+  grid-template-rows: 50px 320px 320px 320px 320px 320px 150px;
+  grid-row-gap: 15px;
+}
+/* For Works page*/
+.universeaty, .fever, .coolcook, .gallary{
+  grid-column: 2 / span 1;
+}
+.universeaty-image, .fever-image, .coolcook-image, .gallary-image{
+  grid-column: 1 / span 3;
+  max-height: 1200px;
+  overflow: hidden;
+}
+.universeaty, .universeaty-image{
+  grid-row: 3 / span 1;
+}
+.fever, .fever-image{
+  grid-row: 4 / span 1;
+}
+.coolcook, .coolcook-image{
+  grid-row: 5 / span 1;
+}
+.gallary, .gallary-image{
+  grid-row: 6 / span 1;
+}
+.text-block{
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .8);
+  padding: 30px;
+  text-align: center;
+  width: auto;
+  height: fit-content;
+  align-self: center;
+  line-height: 1.3;
+}
+.universeaty-image{
+  border-radius: 5px;
+  background-image: url("../images/universeaty_cover_01.png");
+  background-size: cover;
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
+}
+.universeaty-image:hover{
+  border-radius: 5px;
+  background-image: url("../images/universeaty_cover_02.png");
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+}
+.fever-image{
+  border-radius: 5px;
+  background-image: url("../images/fever_cover_01.png");
+  background-size: cover;
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
+}
+.fever-image:hover{
+  border-radius: 5px;
+  background-image: url("../images/fever_cover_02.png");
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+}
+.coolcook-image{
+  border-radius: 5px;
+  background-image: url("../images/coolcook_cover_01.png");
+  background-size: cover;
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
+}
+.coolcook-image:hover{
+  border-radius: 5px;
+  background-image: url("../images/coolcook_cover_02.png");
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+}
+.gallary-image{
+  border-radius: 5px;
+  background-image: url("../images/gallary_cover_01.jpeg");
+  background-size: cover;
+  background-color: #cccccc;
+  background-position: center;
+  background-size: cover;
+}
+.gallary-image:hover{
+  border-radius: 5px;
+  background-image: url("../images/gallary_cover_02.gif");
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+}
+
+/* For About Me page*/
+.about_me, .content{
+  grid-column: 2 / span 1;
+}
+.about_me-image{
+  grid-column: 1 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.self-image{
+  grid-column: 1 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.about_me-image{
+  grid-row: 3 / span 1;
+}
+.about_me{
+  grid-row: 4 / span 1;
+}
+.content{
+  grid-row: 5 / span 1;
+}
+.self-image{
+  grid-row: 6 / span 1;
+}
+.about_me-image{
+  border-radius: 5px;
+  background-image: url("../images/me.jpg");
+  background-size: 324px 432px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.self-image{
+  border-radius: 5px;
+  background-image: url("../images/self.jpeg");
+  background-size: 400px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.about_me h2{
+  font-size: 16px;
+}
+.about_me p{
+  font-size: 12px;
+  text-align: left;
+}
+
+/* For Universeaty page*/
+.univ_intro{
+  grid-column: 2 / span 1;
+}
+.sketch-image{
+  grid-column: 1 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.design-image{
+  grid-column: 1 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.high_fi{
+  grid-column: 1 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.sketch-image{
+  grid-row: 3 / span 1;
+}
+.univ_intro{
+  grid-row: 4 / span 1;
+}
+.design-image{
+  grid-row: 5 / span 1;
+}
+.high_fi{
+  grid-row: 6 / span 1;
+}
+.sketch-image{
+  border-radius: 5px;
+  background-image: url("../images/sketch.png");
+  background-size: 400px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.design-image{
+  border-radius: 5px;
+  background-image: url("../images/design.png");
+  background-size: 400px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.univ_intro h2{
+  font-size: 16px;
+}
+.univ_intro p{
+  font-size: 12px;
+  text-align: left;
+}
+.show{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 600px;
+}
+.high_fi h2{
+  font-size: 12px;
+  text-align: center;
+}
+.show > img{
+  border-radius: 5px;
+  margin: 10px;
+  width: 72px;
+  height: 150px;
+}
+
+/* For gallary page*/
+.gallary_photo{
+  grid-column: 1 / -1;
+  grid-row: 3 / span 4;
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(9,150px);
+  margin: auto;
+  width: 200px;
+}
+.img-1{
+  border-radius: 5px;
+  background-image: url("../images/img1.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-2{
+  border-radius: 5px;
+  background-image: url("../images/img2.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-3{
+  border-radius: 5px;
+  background-image: url("../images/img3.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-4{
+  border-radius: 5px;
+  background-image: url("../images/img4.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-5{
+  border-radius: 5px;
+  background-image: url("../images/img5.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-6{
+  border-radius: 5px;
+  background-image: url("../images/img6.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-7{
+  border-radius: 5px;
+  background-image: url("../images/img7.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-8{
+  border-radius: 5px;
+  background-image: url("../images/img8.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-9{
+  border-radius: 5px;
+  background-image: url("../images/img9.jpeg");
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+}
+.img-1:hover{
+  filter: grayscale(0);
+}
+.img-2:hover{
+  filter: grayscale(0);
+}
+.img-3:hover{
+  filter: grayscale(0);
+}
+.img-4:hover{
+  filter: grayscale(0);
+}
+.img-5:hover{
+  filter: grayscale(0);
+}
+.img-6:hover{
+  filter: grayscale(0);
+}
+.img-7:hover{
+  filter: grayscale(0);
+}
+.img-8:hover{
+  filter: grayscale(0);
+}
+.img-9:hover{
+  filter: grayscale(0);
+}
+.gallary_photo div{
+  overflow: hidden;
+}
+
+/* For Contact page*/
+.parallax_box{
+  grid-column: 1 / -1;
+}
+.contact_form{
+  grid-column: 2 / span 1;
+}
+.flip-card{
+   grid-column: 2 / span 1;
+}
+.parallax_box{
+  grid-row: 3 / span 1;
+}
+.contact_form{
+  grid-row: 4 / span 2;
+}
+.flip-card{
+   grid-row: 6 / span 1;
+   place-self: center;
+}
+
+@media all and (min-width: 800px){
+
+  .container{
+  display: grid;
+  grid-template-columns: auto 210px 340px 210px auto;
+  grid-template-rows: 70px 400px 400px 400px 400px 300px 150px;
+  grid-row-gap: 50px;
+  }
+
+  nav{
+    background-color: white;
+    text-align: left;
+    padding: 40px;
+    align-self: center;
+  }
+  nav a{
+    font-size: 18px;
+  }
+
+  header{
+    color: #1c1c1c;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 1;
+  }
+
+/* for Works page*/
+  .fever-image, .gallary-image{
+  grid-column: 3 / span 2;
+  }
+  .universeaty-image, .coolcook-image{
+    grid-column: 2 / span 2;
+  }
+  .universeaty, .coolcook{
+    grid-column: 4 / span 1;
+  }
+  .fever, .gallary{
+    grid-column: 2 / span 1;
+  }
+
+  .universeaty, .universeaty-image{
+  grid-row: 3 / span 1;
+  }
+  .fever, .fever-image{
+  grid-row: 4 / span 1;
+  }
+  .coolcook, .coolcook-image{
+  grid-row: 5 / span 1;
+  }
+  .gallary, .gallary-image{
+  grid-row: 6 / span 1;
+  }
+
+/* for About Me page*/
+  .about_me-image{
+  grid-column: 2 / span 3;
+  }
+  .self-image{
+  grid-column: 2 / span 3;
+  }
+  .about_me{
+    grid-column: 2 / span 3;
+  }
+  .content{
+    grid-column: 2 / span 3;
+  }
+
+  .about_me-image{
+  grid-row: 3 / span 2;
+  }
+  .self-image{
+  grid-row: 6 / span 1;
+  }
+  .about_me{
+  grid-row: 4 / span 1;
+  }
+  .content{
+  grid-row: 5 / span 1;
+  }
+  .about_me-image{
+  border-radius: 5px;
+  background-image: url("../images/me.jpg");
+  background-size: 540px 720px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.about_me h2{
+  font-size: 18px;
+}
+.about_me p{
+  font-size: 16px;
+  text-align: left;
+}
+ .content {
+   top:100px;
+   left: 25%;
+   height: 160px;
+   font-size: 36px;
+   line-height: 40px;
+}
+ .content__container {
+   font-weight: 600;
+   height: 40px;
+   padding: 0 20px;
+}
+ .content__container__list {
+   margin-top: 0;
+   padding-left: 20%;
+   text-align: left;
+}
+ .content__container__list__item {
+   line-height: 40px;
+   margin: 0;
+}
+
+/* For Universeaty page*/
+.univ_intro{
+  grid-column: 2 / span 3;
+}
+.sketch-image{
+  grid-column: 2 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.design-image{
+  grid-column: 2 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.high_fi{
+  grid-column: 2 / span 3;
+  max-height: 800px;
+  overflow: hidden;
+}
+.sketch-image{
+  grid-row: 3 / span 1;
+}
+.univ_intro{
+  grid-row: 4 / span 1;
+}
+.design-image{
+  grid-row: 5 / span 1;
+}
+.high_fi{
+  grid-row: 6 / span 1;
+}
+.sketch-image{
+  background-size: 800px 600px;
+}
+.design-image{
+  background-size: 800px 600px;
+}
+.univ_intro h2{
+  font-size: 18px;
+}
+.univ_intro p{
+  font-size: 16px;
+  text-align: left;
+}
+.show{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 600px;
+}
+.high_fi h2{
+  font-size: 18px;
+  text-align: center;
+}
+.show > img{
+  border-radius: 5px;
+  margin: 10px;
+  width: 108px;
+  height: 225px;
+}
+
+/* For gallary page*/
+.gallary_photo{
+  grid-column: 2 / span 3; /* 760 px*/
+  grid-row: 3 / span 4; /* 1900 px*/
+  display:grid;
+  grid-template-columns: 190px 190px 190px 190px;
+  grid-template-rows: 320px 320px 320px 320px 320px;
+  margin: auto;
+  width: 760px;
+  grid-row-gap: 0;
+}
+.img-1{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 900px 1200px;
+}
+.img-2{
+  grid-column: 2 / span 3;
+  grid-row: 1 / span 1;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 700px 400px;
+}
+.img-3{
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 600px 400px;
+}
+.img-4{
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 600px 400px;
+}
+.img-5{
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 3;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 1600px 1200px;
+}
+.img-6{
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 800px 600px;
+}
+.img-7{
+  grid-column: 1 / span 1;
+  grid-row: 5 / span 1;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 800px 600px;
+}
+.img-8{
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 800px 600px;
+}
+.img-9{
+  grid-column: 2 / span 3;
+  grid-row: 5 / span 1;
+  overflow: hidden;
+  border-radius: 0;
+  background-size: 800px 600px;
+}
+/* For Contact page*/
+.contact_form{
+  grid-column: 2 / span 3;
+}
+.flip-card{
+   grid-column: 2 / span 3;
+}
+.contact_form{
+  grid-row: 4 / span 2;
+}
+.flip-card{
+   grid-row: 6 / span 1;
+}
+
+/*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  /*reduce motion for header*/
+  @-webkit-keyframes puff-in {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+  @keyframes puff-in {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+  /*reduce motion for animation text*/
+  @keyframes change {
+    100% {
+       transform: translate3d(0, 0, 0);
+    }
+
+  }
+}
